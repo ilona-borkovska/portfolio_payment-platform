@@ -1,0 +1,16 @@
+.page {
+  @apply flex flex-col justify-between items-center w-full h-screen box-border bg-no-repeat bg-center bg-cover;
+  background-image: url('/bg.jpeg');
+
+  .header {
+    @apply w-full;
+  }
+
+  .main {
+    @apply w-full box-border flex-grow;
+  }
+
+  .footer {
+    @apply w-full h-8;
+  }
+}

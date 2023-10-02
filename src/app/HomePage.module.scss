@@ -1,0 +1,77 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%
+}
+
+.header {
+  @apply pt-16 mb-20;
+  background-color: var(--bg-color);
+}
+
+.title {
+  @apply text-5xl font-bold;
+  color: var(--font-color);
+}
+
+.bottom {
+  @apply pt-36;
+}
+
+.description {
+  @apply text-light;
+}
+
+.transparentTexts {
+  @apply relative flex h-20;
+}
+
+.transparentText {
+  @apply relative text-[150px] font-bold whitespace-nowrap;
+  z-index: 2;
+  background: url('/bg.jpeg');
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &:first-child {
+    @apply h-20;
+    overflow-y: hidden;
+  }
+
+  &:last-child {
+    @apply absolute top-0 left-0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.benefits {
+  @apply relative flex gap-16 items-end;
+}
+
+.text {
+  @apply overflow-hidden h-0 opacity-0 text-sm transition-all;
+}
+
+.info {
+  @apply pl-2 overflow-hidden;
+  border-left: 1px solid #fff;
+}
+
+.benefit {
+  @apply bottom-0 flex gap-3 text-light text-lg cursor-pointer transition-all;
+  max-height: max-content;
+  max-width: 240px;
+  width: 100%;
+
+  &:hover {
+    .text {
+      @apply opacity-100 text-sm h-full;
+    }
+  }
+}

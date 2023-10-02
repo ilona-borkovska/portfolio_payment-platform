@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@/styles/utils/reset.scss';
+@import '@/styles/blocks/container.scss';
+
+:root {
+  --font-color: #141414;
+  --bg-color: #F9FFFD;
+  --decors-color: #141414;
+  font-family: 'Cabin', sans-serif;
+  @apply box-border;
+}
+
+[data-theme="dark"] {
+  --font-color: #F9FFFD;
+  --bg-color: #141414;
+  --decors-color: #F9FFFD;
+}

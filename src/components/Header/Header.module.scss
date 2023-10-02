@@ -1,0 +1,63 @@
+.header {
+  @apply h-10 flex justify-between items-center gap-4 w-full px-2;
+  color: var(--font-color);
+  background-color: var(--bg-color);
+
+  @media (min-width: theme('screens.md')) {
+    @apply h-14;
+  }
+  
+  .logo {
+    @apply flex justify-center items-center gap-1 p-2 bg-transparent text-inherit rounded-md;
+    border: 1px solid var(--decors-color);
+  }
+
+  .logoImg {
+    @apply block w-4 h-4;
+  }
+
+  .decor {
+    @apply w-full;
+    background-color: var(--decors-color);
+    height: 1px;
+  }
+
+  .list {
+    @apply flex items-center justify-center gap-6;
+  }
+
+  .link {
+    @apply font-bold;
+  }
+
+  .buttons {
+    @apply flex justify-center items-center gap-2;
+  }
+
+  .btn {
+    border: 1px solid transparent;
+    @apply block bg-transparent border-none p-2 whitespace-nowrap;
+
+    &:hover {
+      border-color: var(--font-color);
+    }
+  }
+
+  .btn_border {
+    border: 1px solid var(--decors-color);
+    @apply rounded-md transition-colors;
+
+    &:hover {
+      border-color: var(--bg-color);
+      background-color: var(--font-color);
+      color: var(--bg-color);
+    }
+  }
+}
+
+.header,
+.decor,
+.logo {
+  @apply transition-colors;
+  transition-duration: 150ms;
+}

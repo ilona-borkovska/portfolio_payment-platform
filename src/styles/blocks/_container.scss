@@ -1,0 +1,16 @@
+.main-container {
+  max-width: theme('screens.sm');
+  @apply w-full mx-auto box-border px-3;
+
+  @media(min-width: theme('screens.md')) {
+    max-width: theme('screens.md');
+  }
+
+  @media(min-width: theme('screens.lg')) {
+    max-width: theme('screens.lg');
+  }
+
+  @media(min-width: theme('screens.xl')) {
+    max-width: theme('screens.xl');
+  }
+}
