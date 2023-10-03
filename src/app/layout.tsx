@@ -4,6 +4,7 @@ import { Header } from '@/components/Header/Header';
 import '@/styles/blocks/_container.scss';
 import type { Metadata } from 'next'
 import { Cabin } from 'next/font/google'
+import Footer from '@/components/Footer/Footer';
 
 const cabin = Cabin({
   subsets: ['latin'],
@@ -33,9 +34,8 @@ export default function RootLayout({
               {children}
             {/* </div> */}
           </main>
-          
 
-          {/* <footer className={s.footer}>footer</footer> */}
+          <Footer />
         </div>
        </body>
     </html>

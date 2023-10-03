@@ -1,0 +1,22 @@
+.footer {
+  @apply absolute bottom-7 right-4 block;
+}
+
+.list {
+  @apply flex flex-col gap-1 items-center;
+}
+
+.link {
+  @apply flex justify-center items-center rounded-lg
+    text-light text-lg w-10 h-10 transition-colors;
+  border: 1px solid #fff;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover {
+    @apply text-slate-400;
+  }
+}

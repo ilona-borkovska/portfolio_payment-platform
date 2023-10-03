@@ -55,7 +55,7 @@
 }
 
 .text {
-  @apply overflow-hidden h-0 opacity-0 text-sm transition-all;
+  @apply overflow-hidden opacity-0 text-sm h-0 origin-top transition-all;
 }
 
 .info {
@@ -64,12 +64,15 @@
 }
 
 .benefit {
-  @apply bottom-0 flex gap-3 text-light text-lg cursor-pointer transition-all;
-  max-height: max-content;
+  @apply bottom-0 flex gap-3 text-light text-lg cursor-pointer transition-all overflow-hidden;
+  transition: height 0.9s ease;
+  height: 56px;
   max-width: 240px;
   width: 100%;
 
   &:hover {
+    height: 165px;
+
     .text {
       @apply opacity-100 text-sm h-full;
     }
